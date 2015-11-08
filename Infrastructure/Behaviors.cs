@@ -100,7 +100,7 @@ namespace Infrastructure.Behaviors
             IRegionManager regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
             if (regionManager != null)
             {
-                IRegion region = new AllActiveRegion();
+                IRegion region = new SingleActiveRegion();
                 DialogActivationBehavior behavior;
                 behavior = new WindowDialogActivationBehavior();
                 behavior.HostControl = owner;

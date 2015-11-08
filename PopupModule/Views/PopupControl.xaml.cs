@@ -7,6 +7,7 @@ namespace PopupModule.Views
     /// <summary>
     /// Interaction logic for PopupControl.xaml
     /// </summary>
+    [Export("PopupControl")]
     [ViewExport(RegionName = RegionNames.DummyRegion)]
     public partial class PopupControl : UserControl
     {

@@ -14,7 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <ContentControl prism:RegionManager.RegionName="MainRegion" HorizontalAlignment="Stretch" 
 			                VerticalAlignment="Top"/>

@@ -1,6 +1,7 @@
 ﻿using Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,18 +19,21 @@ namespace Prism_Multi
     /// <summary>
     /// Interaction logic for AppShell.xaml
     /// </summary>
+    [Export(typeof(AppShell))]
     public partial class AppShell : Window
     {
         private readonly MyCommandProxy commandProxy;
 
-        public AppShell()
+        [ImportingConstructor]
+        public AppShell(MyCommandProxy commandProxy)
         {
             InitializeComponent();
+            this.commandProxy = commandProxy;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            commandProxy.ShowOrderCommand.Execute(0);
+            commandProxy.ShowOrderCommand.Execute("0");
         }
     }
 }
