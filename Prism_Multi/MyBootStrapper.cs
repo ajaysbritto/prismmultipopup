@@ -1,4 +1,5 @@
 ﻿using Prism.Mef;
+using System.ComponentModel.Composition.Hosting;
 using System.Windows;
 
 namespace Prism_Multi
@@ -7,6 +8,9 @@ namespace Prism_Multi
     {
         protected override void ConfigureAggregateCatalog()
         {
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MyBootStrapper).Assembly));
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(Infrastructure.AutoPopulateExportedViewsBehavior).Assembly));
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PopupModule.PopupModule).Assembly));
         }
 
         protected override void InitializeShell()

@@ -4,5 +4,6 @@
     {
         public const string MainRegion = "MainRegion";
         public const string PopupRegion = "PopupRegion";
+        public const string DummyRegion = "PopupRegion";
     }
 }

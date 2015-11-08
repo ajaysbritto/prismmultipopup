@@ -63,6 +63,7 @@
     <Compile Include="Behaviors.cs" />
     <Compile Include="DialogActivationBehavior.cs" />
     <Compile Include="IWindow.cs" />
+    <Compile Include="MyCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionNames.cs" />
     <Compile Include="ViewExportAttribute.cs" />

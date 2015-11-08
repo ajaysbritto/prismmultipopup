@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace Prism_Multi
     /// </summary>
     public partial class AppShell : Window
     {
+        private readonly MyCommandProxy commandProxy;
+
         public AppShell()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            commandProxy.ShowOrderCommand.Execute(0);
         }
     }
 }

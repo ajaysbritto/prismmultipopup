@@ -11,7 +11,15 @@
         infBehaviors:RegionPopupBehaviors.ContainerWindowStyle="{StaticResource WindowRegionStyle}"
         Title="AppShell" Height="300" Width="300">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <ContentControl prism:RegionManager.RegionName="MainRegion" HorizontalAlignment="Stretch" 
 			                VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="70,39,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Grid.Row="1"/>
+        <ContentControl prism:RegionManager.RegionName="DummyRegion" HorizontalAlignment="Stretch" 
+			                VerticalAlignment="Top" Grid.Row="2"/>
     </Grid>
 </Window>

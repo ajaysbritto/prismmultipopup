@@ -1,4 +1,5 @@
 ﻿using Infrastructure;
+using System.ComponentModel.Composition;
 using System.Windows.Controls;
 
 namespace PopupModule.Views
@@ -6,12 +7,21 @@ namespace PopupModule.Views
     /// <summary>
     /// Interaction logic for PopupControl.xaml
     /// </summary>
-    [ViewExport(RegionName = RegionNames.PopupRegion)]
+    [ViewExport(RegionName = RegionNames.DummyRegion)]
     public partial class PopupControl : UserControl
     {
         public PopupControl()
         {
             InitializeComponent();
+        }
+
+        [Import]
+        public PopupViewModel ViewModel
+        {
+            set
+            {
+                DataContext = value;
+            }
         }
     }
 }
